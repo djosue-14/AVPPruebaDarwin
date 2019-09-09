@@ -1,3 +1,9 @@
+DROP DATABASE IF EXISTS AVPPruebaDarwin;
+
+CREATE DATABASE AVPPruebaDarwin;
+
+USE AVPPruebaDarwin;
+
 CREATE TABLE Empleados(
 	Id int identity(1,1),
 	Nombre varchar(30),
