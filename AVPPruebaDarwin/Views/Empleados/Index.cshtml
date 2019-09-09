@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "Empleados";
+}
+
+<div class="card" id="cardCreate">
+    <div class="card-header">
+        <h4 class="card-title">
+            EMPLEADOS
+        </h4>
+        <a href="/Empleados/Create" class="btn btn-sm btn-success">Crear</a>
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Dpi</th>
+                    <th>Direccion</th>
+                    <th>Telefono</th>
+                    <th>UserName</th>
+                    <th>Opciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var Model in ViewBag.Empleados)
+                {
+                    <tr>
+
+                        <td>@Model.Nombre</td>
+                        <td>@Model.Apellido</td>
+                        <td>@Model.Dpi</td>
+                        <td>@Model.Direccion</td>
+                        <td>@Model.Telefono</td>
+                        <td>@Model.UserName</td>
+                        <td>
+                            <a href="/Empleados/Edit/@Model.Id" class="btn btn-sm btn-warning">Editar</a>
+                            <a href="/Empleados/Delete/@Model.Id" class="btn btn-sm btn-danger">Eliminar</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

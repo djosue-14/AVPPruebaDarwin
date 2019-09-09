@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+<div class="card" id="cardCreate">
+    <div class="card-header">
+        <h4 class="card-title">
+            AGREGAR EMPLEADO
+        </h4>
+        <a href="/Empleados" class="btn btn-sm btn-success">Regresar</a>
+    </div>
+    <form id="formCreate" method="post" role="form" action="/Empleados/Login">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="UserName">UserName</label>
+                        <input type="text" id="UserName" class="form-control" name="UserName" />
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="Passwor">Password</label>
+                        <input type="password" id="Password" class="form-control" name="Password" />
+                    </div>
+                </div>
+                <div class="col-md-12 text-right">
+                    <button data-title="Guardar" class="btn bg-primary">
+                        Ingresar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

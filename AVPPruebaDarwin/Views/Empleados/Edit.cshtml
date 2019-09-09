@@ -1,0 +1,74 @@
+﻿
+@{
+    ViewBag.Title = "Editar Empleado";
+}
+
+<div class="card" id="cardCreate">
+    <div class="card-header">
+        <h4 class="card-title">
+            AGREGAR EMPLEADO
+        </h4>
+        <a href="/Empleados" class="btn btn-sm btn-success">Regresar</a>
+    </div>
+    <form id="formCreate" method="post" role="form" action="/Empleados/Edit">
+        <input type="hidden" id="Id" name="Id" value="@ViewBag.Empleado.Id" />
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="Nombre">Nombre</label>
+                        <input type="text" id="Nombre" class="form-control" name="Nombre" value="@ViewBag.Empleado.Nombre" required/>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="Apellido">Apellido</label>
+                        <input type="text" id="Apellido" class="form-control" name="Apellido" value="@ViewBag.Empleado.Apellido" required/>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="Dpi">Dpi</label>
+                        <input type="text" id="Dpi" class="form-control" name="Dpi" value="@ViewBag.Empleado.Dpi"/>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="Direccion">Direccion</label>
+                        <input type="text" id="Direccion" class="form-control" name="Direccion" value="@ViewBag.Empleado.Direccion"/>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="Telefono">Telefono</label>
+                        <input type="number" id="Nombre" class="form-control" name="Telefono" value="@ViewBag.Empleado.Telefono"/>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="UserName">UserName</label>
+                        <input type="text" id="UserName" class="form-control" name="UserName" value="@ViewBag.Empleado.UserName" required/>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="Passwor">Password</label>
+                        <input type="password" id="Password" class="form-control" name="Password" required />
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="Role">Role</label>
+                        <input type="text" id="Role" class="form-control" name="Role" value="@ViewBag.Empleado.Role"/>
+                    </div>
+                </div>
+                <div class="col-md-12 text-right">
+                    <button data-title="Guardar" class="btn bg-primary">
+                        Guardar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
